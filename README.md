@@ -1,76 +1,105 @@
-# HTML-LESS-JS-no-webpack-starter
-Single page webpage with LESS support and vanillaJS framework
+<!-- PROJECT SHIELDS -->
+<!--
+*** "reference style" links are used for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-# JS no-webpack Template
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues-open][issues-open-shield]][issues-open-url]
+[![Issues-closed][issues-closed-shield]][issues-closed-url]
 
-Welcome to our Javascript template meant to be used for [Microverse](https://www.microverse.org/)'s projects on JS (before webpack)!
-Generate your JS project the easy way!
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://www.microverse.org/">
+    <img src="doc/microverse.png" alt="Logo" width="80" height="80">
+  </a>
 
+  <h1 align="center">
+	Tic Tac Toe
+  </h1>
 
-## Features
+  <p align="center">
+    A Tic Tac Toe game you can play in your browser! created with JS
+    <br />
+	  🖊️
+    <a href="https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript">Assigment</a>
+    🐞
+    <a href="https://github.com/Israel-Laguan/TicTacToe-JS/issues">Report a Bug</a>
+    🙋‍♂️
+    <a href="https://github.com/Israel-Laguan/TicTacToe-JS/issues">Request Feature</a>
+  </p>
+</p>
 
-* Setup a basic VanillaJS app with a single script or few commands
-* Makes LESS ready to use with all its benefits
-* Lets us use JS modules and ES6+ available for most browsers
-* Ready made examples on CSS and Less
-* Sets `stickler` on the repo
-* Sets `eslint` rules
-* Example of Web Components
-* Gives you a great README to start with
-* Easy to generate projects in GitHub
-* Meant to be useful for Microverse students and anyone that wants a JS' Apps (no webpack)
+# Specifications
 
-# Pre Requisites
+- Use of objects and objects constructors
+- Factory Functions and the Module Pattern
+- CRUD functionality
+- Display stored books
+- Store books in local storage
 
-The script requires you to have:
+# Features
 
-- Some compatible Linux OS (We tested on Debian/Ubuntu derivatives)
-- `nodejs` latest LTS version
-- `git` and normal development stuff
-- Basic terminal and script knowledge
-- Some common sense
+- Basic VanillaJS app with a single script or few commands
+- JS modules and ES6+ available for most browsers
+- Sets `stickler` on the repo
+- Sets `eslint` rules
+- Tests made with [`ESLint`](https://eslint.org/)
 
-Now, this is meant to be used as a [GitHub Template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template),
-so please don't clone this repository (unless you want to collaborate), 
-use [this button](https://github.com/Israel-Laguan/HTML-LESS-JS-no-webpack-starter/generate) instead.
+# Built With
 
-<div align="center">
-    <a href="https://github.com/Israel-Laguan/HTML-LESS-JS-no-webpack-starter/generate" target="_blank">
-        <img src="doc/template-button.png">
-    </a>
-</div>
+- `LESS`
+- `ESLint`
+- `npm`
+- `vscode` with _ESLint_ extension
+- Linux/GNU
+- Love and Passion for code
 
-## Creating a new project
+# Live Demo
 
-After you used the template in your project, clone your project in you PC and 
-open a terminal inside your project, like this: 
-
-```
-git clone <your-repo-link>
-cd <Your-project>
-````
-
-First run the [script](run_me.sh) provided:
-
-```
-chmod -x ./run_me.sh
-bash ./run_me.sh
-```
-
-In VS Code, Ctrl + Shift + X
-Search ESLint
-Install ESLint
-Restart VS Code
-<!-- https://travishorn.com/setting-up-eslint-on-vs-code-with-airbnb-javascript-style-guide-6eb78a535ba6 -->
-Last but not least the script remove this README and substitute for the renamed [README.TEMPLATE](README.TEMPLATE.md) (meant to be used for _Microverse Projects_), so if you are running each command instead of using the script make the change of READMEs manually.
-
-## Troubleshooting
-
+[Link](#)
 
 # Authors
 
-- [Israel Laguan](https://github.com/Israel-Laguan)
+👨 [Fabricio Garcia](https://github.com/fabricio-garcia)\
+👨 [Israel Laguan](https://github.com/Israel-Laguan)
 
-# License
+# 🤝 Contributing
 
-This project is licensed under the Apache 2 License - see the [LICENSE.md](LICENSE.md) file for details.
+Contributions, issues and feature requests are welcome!
+
+# 🤗 Show your support
+
+Give a ⭐️ if you like this project!
+
+# 🏅 Acknowledgements
+
+Give a ⭐️ if you like this project!
+
+- [Microverse](https://www.microverse.org/)
+- [The Odin Project](https://www.theodinproject.com/)
+
+# 📝 License
+
+This project is licensed under the Apache License 2.0\
+Feel free to fork this project and improve it
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/Israel-Laguan/TicTacToe-JS?style=plastic
+[contributors-url]: https://github.com/Israel-Laguan/TicTacToe-JS/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Israel-Laguan/TicTacToe-JS?style=plastic
+[forks-url]: https://github.com/Israel-Laguan/TicTacToe-JS/network/members
+[stars-shield]: https://img.shields.io/github/stars/Israel-Laguan/TicTacToe-JS?style=plastic
+[stars-url]: https://github.com/Israel-Laguan/TicTacToe-JS/stargazers
+[issues-open-shield]: https://img.shields.io/github/issues/Israel-Laguan/TicTacToe-JS?style=plastic
+[issues-closed-url]: https://github.com/Israel-Laguan/TicTacToe-JS/issues
+[issues-closed-shield]: https://img.shields.io/github/issues-closed/Israel-Laguan/TicTacToe-JS?style=plastic
+[issues-open-url]: https://github.com/Israel-Laguan/TicTacToe-JS/issues
