@@ -9,8 +9,43 @@
     <link rel="stylesheet/less" type="text/css" href="src/css/main.css" />
   </head>
   <body>
-    <div>
-      <h1>Create Great Ideas here!</h1>
+    <div id="landing-container">
+      <h1>Tic-Tac-Toe</h1>
+      <span class="players-text">Players:</span>
+      <button class="one-player"></button>
+      <button class="two-players"></button>
     </div>
+    <form>
+      <div class="player-names">
+        <div class="player-1">
+          <label>
+            x<input name="p1" placeholder="Player 1">
+          </label>
+        </div>
+        <div class="player-2">
+          <label>
+            o<input name="p2" placeholder="Player 2">
+          </label>
+        </div>
+      </div>
+      <button class="play-button" onclick="startGame()">Play</button>
+    </form>
+    <div id="game-container">
+      <div class="gameboard-grid">
+        <div id="cell-1" class="block"></div>
+        <div id="cell-2" class="block"></div>
+        <div id="cell-3" class="block"></div>
+        <div id="cell-4" class="block"></div>
+        <div id="cell-5" class="block"></div>
+        <div id="cell-6" class="block"></div>
+        <div id="cell-7" class="block"></div>
+        <div id="cell-8" class="block"></div>
+        <div id="cell-9" class="block"></div>
+      </div>
+      <h2 id="winner"></h2>
+      <button class="play-button" onclick="resetGameboard()">Play</button>
+    </div>
+
+
   </body>
 </html>
