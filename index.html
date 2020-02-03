@@ -6,30 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>My Great Page!</title>
     <!-- LESS -->
-    <link rel="stylesheet/less" type="text/css" href="src/css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/main.css">
   </head>
   <body>
     <div id="landing-container">
       <h1>Tic-Tac-Toe</h1>
-      <span class="players-text">Players:</span>
-      <button class="one-player"></button>
-      <button class="two-players"></button>
-    </div>
-    <form>
-      <div class="player-names">
-        <div class="player-1">
-          <label>
-            x<input name="p1" placeholder="Player 1">
-          </label>
-        </div>
-        <div class="player-2">
-          <label>
-            o<input name="p2" placeholder="Player 2">
-          </label>
-        </div>
+      <div class="players">
+        <span class="players-text">Players:</span>
+        <button class="one-player"></button>
+        <button class="two-players"></button>
       </div>
+      <form>
+        <div class="player-names">
+          <div class="player-1">
+            <label>
+              x<input name="p1" placeholder="Player 1">
+            </label>
+          </div>
+          <div class="player-2">
+            <label>
+              o<input name="p2" placeholder="Player 2">
+            </label>
+          </div>
+        </div>
+      </form>
       <button class="play-button" onclick="startGame()">Play</button>
-    </form>
+    </div>
+
     <div id="game-container">
       <div class="gameboard-grid">
         <div id="cell-1" class="block"></div>
