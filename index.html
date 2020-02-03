@@ -17,21 +17,22 @@
         <button class="one-player"></button>
         <button class="two-players"></button>
       </div>
-      <form>
+      <form id="players-form">
         <div class="player-names">
           <div class="player-1">
             <label>
-              x<input name="p1" placeholder="Player 1">
+              x<input name="p1" placeholder="Player 1" id="p1">
             </label>
           </div>
           <div class="player-2">
             <label>
-              o<input name="p2" placeholder="Player 2">
+              o<input name="p2" placeholder="Player 2" id="p2">
             </label>
           </div>
         </div>
+        <button class="play-button" type="submit">Play</button>
       </form>
-      <button class="play-button" onclick="startGame()">Play</button>
+
     </div>
 
     <div id="game-container">
