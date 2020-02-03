@@ -38,11 +38,10 @@
 
 # Specifications
 
-- Use of objects and objects constructors
-- Factory Functions and the Module Pattern
-- CRUD functionality
-- Display stored books
-- Store books in local storage
+- Data Structures
+- Object Oriented Programming
+- Factory Functions
+- Module Pattern
 
 # Features
 
@@ -63,7 +62,7 @@
 
 # Live Demo
 
-[Link](#)
+[Link](https://Israel-Laguan.github.io/TicTacToe-JS)
 
 # Authors
 
