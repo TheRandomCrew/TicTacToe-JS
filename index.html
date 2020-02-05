@@ -21,12 +21,23 @@
         <div class="player-names">
           <div class="player-1">
             <label>
-              x<input name="p1" placeholder="Player 1" id="p1">
+              x<input 
+                name="p1" 
+                placeholder="Player 1"
+                minlength="2"
+                maxlength="25"
+                id="p1" 
+              >
             </label>
           </div>
           <div class="player-2">
             <label>
-              o<input name="p2" placeholder="Player 2" id="p2">
+              o<input 
+                name="p2" 
+                minlength="2"
+                maxlength="25"
+                placeholder="Player 2" id="p2"
+              >
             </label>
           </div>
         </div>
@@ -36,6 +47,7 @@
     </div>
 
     <div style="display: none" id="game-container">
+      <h2 id="players-name"></h2>
       <div class="gameboard-grid">
         <div id="cell-1" class="block"></div>
         <div id="cell-2" class="block"></div>

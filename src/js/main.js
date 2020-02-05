@@ -151,7 +151,6 @@ const getBoardMoves = () => {
         event.preventDefault();
         const isChanged = game.changeCell(game.showTurn() % 2 ? 0 : 10, i - 1);
         const turn = game.showTurn();
-        console.log(turn);
         if (isChanged) {
           if (game.showTurn() > 4) {
             const {
@@ -182,9 +181,12 @@ const playerNames = document.getElementById('players-form');
 playerNames.addEventListener('submit', event => {
   event.preventDefault();
   // @ts-ignore
-  // const p1 = document.getElementById('p1').value;
+  const p1 = document.getElementById('p1').value;
   // @ts-ignore
-  // const p2 = document.getElementById('p2').value;
+  const p2 = document.getElementById('p2').value;
+  document.getElementById('players-name').innerText = `
+    X: ${p1 || 'Player 1'} VS O: ${p2 || 'Player 2'}
+  `;
   document.getElementById('game-container').setAttribute('style', 'display: grid;');
   document.getElementById('landing-container').setAttribute('style', 'display: none;');
   getBoardMoves();
