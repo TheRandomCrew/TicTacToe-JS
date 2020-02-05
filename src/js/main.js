@@ -159,11 +159,14 @@ const getBoardMoves = () => {
               document.getElementById('winner').innerText = `
                 ${winner === 10 ? 'X' : 'O'} Wins! ${reason}
               `;
+              return true;
             }
+            document.getElementById('winner').innerText = 'Its a tie';
             document.getElementById('reset-button').removeAttribute('hidden');
           }
         }
         document.getElementById(`cell-${i}`).innerText = game.showTurn() % 2 ? 'X' : 'O';
+        return true;
       });
   }
 };
