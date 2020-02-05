@@ -8,9 +8,10 @@ const game = (() => {
   const showBoard = () => board;
   const verifyCell = (cell) => board[cell] !== 0 || board[cell] !== 10;
   const changeCell = (value, cell) => {
-    if (!verifyCell) return false;
+    if (!verifyCell(cell)) return false;
     board[cell] = value;
     turn += 1;
+    console.log(value, cell);
     return true;
   };
   const verifyRows = board => {
@@ -141,11 +142,13 @@ const gameStatus = (p1Name, p2Name) => {
 };
 
 const getBoardMoves = () => {
+  let currentTurn = 1;
   for (let i=1; i < 10; i++) {
     document.getElementById(`cell-${i}`)
       .addEventListener('click', event => {
         event.preventDefault();
-        console.log(`cell-${i}`);
+        game.changeCell(currentTurn%2 ? 10 : 0, i);
+        currentTurn++;
       })
   }
 };
