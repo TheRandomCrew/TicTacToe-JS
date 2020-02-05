@@ -101,7 +101,7 @@ const game = (() => {
         winner: null
       };
     }
-    ;
+
     const rows = verifyRows(state);
     if (rows.onGame) return rows;
     const columns = verifyColumns(state);
@@ -127,7 +127,7 @@ const game = (() => {
     showBoard,
     changeCell,
     verifyWin,
-    resetBoard
+    resetBoard,
   };
 })();
 
@@ -140,12 +140,25 @@ const gameStatus = (p1Name, p2Name) => {
   const p2 = player(p2Name, 'O');
 };
 
+const getBoardMoves = () => {
+  for (let i=1; i < 10; i++) {
+    document.getElementById(`cell-${i}`)
+      .addEventListener('click', event => {
+        event.preventDefault();
+        console.log(`cell-${i}`);
+      })
+  }
+};
+
 const playerNames = document.getElementById('players-form');
 playerNames.addEventListener('submit', event => {
   event.preventDefault();
   const p1 = document.getElementById('p1').value;
   const p2 = document.getElementById('p2').value;
   console.log(p1, p2);
+  document.getElementById('game-container').style='display: grid;';
+  document.getElementById('landing-container').style='display: none;';
+  getBoardMoves();
 });
 
 console.log(playerNames);
@@ -153,4 +166,4 @@ console.log(playerNames);
 window.addEventListener('load', () => {
   console.log(game.showTurn());
   console.log(game.showBoard());
-});
+})
