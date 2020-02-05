@@ -40,9 +40,9 @@ const game = (() => {
         winner: board[3],
       };
     }
-    if (board[5] === board[1]
-      && board[0] === board[1]
-      && board[0] === board[1]) {
+    if (board[6] === board[7]
+      && board[6] === board[8]
+      && board[7] === board[8]) {
       return {
         win: true,
         reason: 'Win on third row',
