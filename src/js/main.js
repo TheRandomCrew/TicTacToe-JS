@@ -1,13 +1,4 @@
 // @ts-check
-// const player = (name, x) => {
-//   return { name, x };
-// };
-
-// const gameStatus = (p1Name, p2Name) => {
-//   const p1 = player(p1Name, 'X');
-//   const p2 = player(p2Name, 'O');
-//   return {p1, p2}
-// };
 const game = (() => {
   const defaultBoard = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let turn = 0;
@@ -180,12 +171,11 @@ const getBoardMoves = () => {
 const playerNames = document.getElementById('players-form');
 playerNames.addEventListener('submit', event => {
   event.preventDefault();
-  // @ts-ignore
-  const p1 = document.getElementById('p1').value;
-  // @ts-ignore
-  const p2 = document.getElementById('p2').value;
+  const p1 = document.getElementById('p1');
+  const p2 = document.getElementById('p2');
   document.getElementById('players-name').innerText = `
-    X: ${p1 || 'Player 1'} VS O: ${p2 || 'Player 2'}
+  // @ts-ignore
+    X: ${p1.value || 'Player 1'} VS O: ${p2.value || 'Player 2'}
   `;
   document.getElementById('game-container').setAttribute('style', 'display: grid;');
   document.getElementById('landing-container').setAttribute('style', 'display: none;');
