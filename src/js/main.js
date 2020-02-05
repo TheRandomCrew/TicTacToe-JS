@@ -142,14 +142,21 @@ const gameStatus = (p1Name, p2Name) => {
 };
 
 const getBoardMoves = () => {
-  let currentTurn = 1;
-  for (let i=1; i < 10; i++) {
+  for (let i = 1; i < 10; i += 1) {
     document.getElementById(`cell-${i}`)
       .addEventListener('click', event => {
         event.preventDefault();
-        game.changeCell(currentTurn%2 ? 10 : 0, i);
-        currentTurn++;
-      })
+        document.getElementById(`cell-${i}`).innerText = game.showTurn() % 2 ? 'O' : 'X';
+        game.changeCell(game.showTurn() % 2 ? 0 : 10, i - 1);
+        const { onGame, winner } = game.verifyWin(game.showBoard());
+        if (onGame) {
+          console.log('continue');
+        } else {
+          console.log(winner);
+        }
+        console.log(game.showTurn());
+        console.log(game.showBoard());
+      });
   }
 };
 
@@ -163,8 +170,6 @@ playerNames.addEventListener('submit', event => {
   document.getElementById('landing-container').style='display: none;';
   getBoardMoves();
 });
-
-console.log(playerNames);
 
 window.addEventListener('load', () => {
   console.log(game.showTurn());
