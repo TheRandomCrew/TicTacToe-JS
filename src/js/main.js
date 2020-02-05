@@ -173,9 +173,10 @@ playerNames.addEventListener('submit', event => {
   event.preventDefault();
   const p1 = document.getElementById('p1');
   const p2 = document.getElementById('p2');
-  document.getElementById('players-name').innerText = `
   // @ts-ignore
-    X: ${p1.value || 'Player 1'} VS O: ${p2.value || 'Player 2'}
+  const names = [p1.value, p2.value];
+  document.getElementById('players-name').innerText = `
+    X: ${names[0] || 'Player 1'} VS O: ${names[1] || 'Player 2'}
   `;
   document.getElementById('game-container').setAttribute('style', 'display: grid;');
   document.getElementById('landing-container').setAttribute('style', 'display: none;');
