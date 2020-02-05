@@ -14,7 +14,7 @@ const game = (() => {
   let board = [...defaultBoard];
   const showTurn = () => turn;
   const showBoard = () => board;
-  const verifyCell = (cell) => board[cell] !== 0 || board[cell] !== 10;
+  const verifyCell = (cell) => board[cell] !== 0 && board[cell] !== 10;
   const changeCell = (value, cell) => {
     if (!verifyCell(cell)) return false;
     board[cell] = value;
@@ -149,23 +149,30 @@ const getBoardMoves = () => {
     document.getElementById(`cell-${i}`)
       .addEventListener('click', event => {
         event.preventDefault();
-        game.changeCell(game.showTurn() % 2 ? 0 : 10, i - 1);
-        if (game.showTurn() > 4) {
-          const {
-            onGame, winner, win, reason,
-          } = game.verifyWin(game.showBoard());
-          if (!onGame) {
-            if (win) {
-              document.getElementById('winner').innerText = `
+        const isChanged = game.changeCell(game.showTurn() % 2 ? 0 : 10, i - 1);
+        const turn = game.showTurn();
+        console.log(turn);
+        if (isChanged) {
+          if (game.showTurn() > 4) {
+            const {
+              onGame, winner, win, reason,
+            } = game.verifyWin(game.showBoard());
+            if (!onGame) {
+              if (win) {
+                document.getElementById('winner').innerText = `
                 ${winner === 10 ? 'X' : 'O'} Wins! ${reason}
-              `;
-              return true;
+                `;
+                document.getElementById(`cell-${i}`).innerText = turn % 2 ? 'X' : 'O';
+                document.getElementById('reset-button').removeAttribute('hidden');
+                return true;
+              }
+              document.getElementById('winner').innerText = 'Its a tie';
+              document.getElementById('reset-button').removeAttribute('hidden');
             }
-            document.getElementById('winner').innerText = 'Its a tie';
-            document.getElementById('reset-button').removeAttribute('hidden');
           }
+          document.getElementById(`cell-${i}`).innerText = game.showTurn() % 2 ? 'X' : 'O';
+          return true;
         }
-        document.getElementById(`cell-${i}`).innerText = game.showTurn() % 2 ? 'X' : 'O';
         return true;
       });
   }
