@@ -62,7 +62,7 @@
 
 # Live Demo
 
-[Link](https://Israel-Laguan.github.io/TicTacToe-JS)
+[Link](https://raw.githack.com/Israel-Laguan/TicTacToe-JS/24623a2bc3f0764698f32103f8b48074abf91278/index.html)
 
 # Authors
 
