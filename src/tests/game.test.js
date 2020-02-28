@@ -1,4 +1,4 @@
-import game from './game';
+import game from '../js/game';
 
 const defaultBoard = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 describe('game', () => {
@@ -15,5 +15,10 @@ describe('game', () => {
     expect(game.showBoard()).toStrictEqual([1, 2, 3, 4, 5, 0, 7, 8, 9]);
     game.changeCell(10, 6);
     expect(game.showBoard()).toStrictEqual([1, 2, 3, 4, 5, 0, 10, 8, 9]);
+  });
+
+  test('game.resetBoard() reset board showed', () => {
+    game.resetBoard();
+    expect(game.showBoard()).toStrictEqual(defaultBoard);
   });
 });
