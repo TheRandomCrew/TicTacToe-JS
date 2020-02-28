@@ -6,7 +6,8 @@
   "scripts": {
     "start": "serve .",
     "test": "jest --coverage -w =100%",
-    "fix": "eslint . --fix"
+    "lint": "eslint src/js/ --cache -f table",
+    "fix": "eslint src/js/ --fix"
   },
   "jest": {
     "transform": {

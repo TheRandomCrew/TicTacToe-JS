@@ -36,12 +36,15 @@
   </p>
 </p>
 
+![game](doc/game.png)
+
 # Specifications
 
 - Data Structures
 - Object Oriented Programming
 - Factory Functions
 - Module Pattern
+- Export/import ES6+ notation
 
 # Features
 
@@ -50,6 +53,18 @@
 - Sets `stickler` on the repo
 - Sets `eslint` rules
 - Tests made with [`ESLint`](https://eslint.org/)
+- Unit Testing with [`Jest`](https://jestjs.io/)
+- Add `jest` and `eslint` to be callable with `npm`
+
+# Tests
+
+## `ESlint`
+
+![ESlint](doc/linter.png)
+
+## `Jest`
+
+![Jest](doc/jest.png)
 
 # Built With
 
@@ -62,7 +77,7 @@
 
 # Live Demo
 
-[Link](https://raw.githack.com/Israel-Laguan/TicTacToe-JS/24623a2bc3f0764698f32103f8b48074abf91278/index.html)
+[Link](https://raw.githack.com/Israel-Laguan/TicTacToe-JS/685a73692cfe12b597d806636ed956cad2393b63/index.html)
 
 # Authors
 
