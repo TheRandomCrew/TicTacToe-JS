@@ -1,5 +1,5 @@
-// @ts-check
-import game from './game';
+// eslint-disable-next-line import/extensions
+import game from './game.js';
 
 const getBoardMoves = () => {
   for (let i = 1; i < 10; i += 1) {

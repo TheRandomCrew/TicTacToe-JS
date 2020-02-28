@@ -94,12 +94,6 @@ const game = (() => {
     return { onGame: true };
   };
   const verifyWin = (state) => {
-    if (turn < 1 || turn > 9) {
-      return {
-        onGame: false,
-        winner: null,
-      };
-    }
     const rows = verifyRows(state);
     if (rows.win) {
       return rows;
